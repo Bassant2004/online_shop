@@ -10,7 +10,9 @@ function Card({ product }) {
 
       <p className="price">${product.price}</p>
 
-      <Button />
+     <Button
+  onClick={() => alert(`${product.title} added to cart`)}
+/>
     </div>
   );
 }
