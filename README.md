@@ -169,6 +169,17 @@ I also wrapped the Card component with React.memo to reduce unnecessary re-rende
 - Improve the user interface with animations.
 
 ---
+---
+
+## 🌐 Project Links
+
+### 🔗 Live Demo
+
+https://online-shop-amber-alpha.vercel.app/
+
+### 💻 GitHub Repository
+
+https://github.com/Bassant2004/online_shop
 
 ## 👩‍💻 Author
 
