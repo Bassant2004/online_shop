@@ -13,14 +13,10 @@ function App() {
     data: products,
     loading,
     error,
-  } = useFetch("https://fakestoreapi.com/products");
+  } = useFetch("https://fakestoreapi.com/products"); 
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-
-  if (error) {
-  return <ErrorMessage />;
-}
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -35,6 +31,10 @@ function App() {
       return matchesSearch && matchesCategory;
     });
   }, [products, searchTerm, selectedCategory]);
+
+  if (error) {
+    return <ErrorMessage />;
+  }
 
   return (
     <>
@@ -84,8 +84,14 @@ function App() {
 
       {loading ? (
         <LoadingSpinner />
+      ) : products.length === 0 ? (
+        <h2 className="empty-state">
+          📦 No products available
+        </h2>
       ) : filteredProducts.length === 0 ? (
-        <h2 className="empty-state">🔍 No results found</h2>
+        <h2 className="empty-state">
+          🔍 No results found
+        </h2>
       ) : (
         <div className="products-container">
           {filteredProducts.map((product) => (

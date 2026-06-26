@@ -1,35 +1,32 @@
 # 🛍️ Trendify
 
-A responsive Single Page Application (SPA) built with React and Vite.
+## 📖 Project Overview
 
-Trendify fetches products from the Fake Store API and allows users to browse, search, and filter products by category through a clean and responsive interface.
+Trendify is a React Single Page Application (SPA) built with Vite. The application fetches product data from the Fake Store API and displays it in a clean and responsive user interface.
 
----
-
-## 🌐 Live Demo
-
-https://online-shop-amber-alpha.vercel.app/
+Users can search for products by title and filter them by category. The project also handles loading, error, and empty states to improve the user experience.
 
 ---
 
 ## ✨ Features
 
-- Fetch products from the Fake Store API
-- Search products by title
-- Filter products by category
-- Responsive design for mobile, tablet, and desktop
-- Loading state while fetching data
-- Error handling with a reusable ErrorMessage component
-- Empty state when no products match the search
-- Reusable React components
-- Custom useFetch hook for API requests
-- Optimized filtering using useMemo
+- Fetch product data from the Fake Store API.
+- Display products using reusable card components.
+- Search products by title.
+- Filter products by category.
+- Loading spinner while data is being fetched.
+- Error message when the API request fails.
+- Empty state when no products match the search.
+- Responsive design for desktop, tablet, and mobile devices.
+- Custom Hook (`useFetch`) for reusable data fetching logic.
+- Performance optimization using useMemo.
+- Prevent unnecessary component re-rendering using React.memo.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
-- React 19
+- React
 - Vite
 - JavaScript (ES6+)
 - CSS3
@@ -37,71 +34,142 @@ https://online-shop-amber-alpha.vercel.app/
 
 ---
 
-## 📁 Project Structure
-src/
-├── assets/
-├── components/
-│   ├── Button.jsx
-│   ├── Card.jsx
-│   ├── ErrorMessage.jsx
-│   ├── Footer.jsx
-│   ├── LoadingSpinner.jsx
-│   ├── Navbar.jsx
-│   └── Searchbar.jsx
-├── hooks/
-│   └── useFetch.js
-├── App.jsx
-├── App.css
-├── index.css
-└── main.jsx
+## ⚛️ React Concepts Used
+
+- Functional Components
+- Props
+- useState
+- useMemo
+- Custom Hook (`useFetch`)
+- React.memo
 
 ---
 
-## 📷 Screenshot
-
-> Add a screenshot of the application here.
-![Trendify](./screenshot.png)
+## 📂 Project Structure
+ONLINE_SHOP
+│
+├── public
+│
+├── Screenshots
+│   ├── HomePage.png
+│   ├── search.png
+│   ├── categories.png
+│   ├── Loading.png
+│   ├── Error message.png
+│   ├── Noresult.png
+│   └── responsive mobile.png
+│
+├── src
+│   ├── assets
+│   ├── components
+│   │   ├── Navbar.jsx
+│   │   ├── Searchbar.jsx
+│   │   ├── Card.jsx
+│   │   ├── Button.jsx
+│   │   ├── LoadingSpinner.jsx
+│   │   ├── ErrorMessage.jsx
+│   │   └── Footer.jsx
+│   │
+│   ├── hooks
+│   │   └── useFetch.js
+│   │
+│   ├── utils
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 
 ---
 
 ## 🚀 Installation
-git clone https://github.com/Bassant2004/online_shop.git
 
-cd online_shop
+Clone the repository:
+git clone <repository-url>
 
+Install dependencies:
 npm install
 
+Run the development server:
 npm run dev
 
 ---
 
-## 💡 Challenges & Solutions
-
-During development, I worked on:
-
-- Fetching data from an external API.
-- Managing loading and error states.
-- Building reusable React components.
-- Implementing real-time search and category filtering.
-- Improving performance using useMemo.
-- Refactoring the fetch logic into a reusable custom hook (`useFetch`).
-- Creating a responsive layout for different screen sizes.
+## 📦 Build for Production
+npm run build
 
 ---
 
-## 🚀 Future Improvements
+## 📸 Screenshots
 
-- Add a shopping cart.
+### 🏠 Home Page
+
+![Home Page](Screenshots/HomePage.png)
+
+---
+
+### 🔍 Search Function
+
+![Search Function](Screenshots/search.png)
+
+---
+
+### 📂 Category Filter
+
+![Category Filter](Screenshots/categories.png)
+
+---
+
+### ❌ Empty State
+
+![No Results](Screenshots/Noresult.png)
+
+---
+
+### 📱 Responsive Design
+
+![Responsive Design](Screenshots/responsive%20mobile.png)
+
+---
+
+### ⏳ Loading State
+
+![Loading State](Screenshots/Loading.png)
+
+---
+
+### ⚠️ Error Message
+
+![Error Message](Screenshots/Error%20message.png)
+
+---
+
+## 💡 Challenges
+
+One of the main challenges was organizing the application while keeping the code reusable and maintainable.
+
+To solve this, I created a reusable custom hook (`useFetch`) to separate the data fetching logic from the UI components.
+
+To improve performance, I used useMemo to avoid recalculating the filtered products unless the product list, search term, or selected category changes.
+
+I also wrapped the Card component with React.memo to reduce unnecessary re-rendering.
+
+---
+
+## 🔮 Future Improvements
+
 - Add a product details page.
-- Add pagination.
-- Add user authentication.
-- Add product sorting options.
+- Implement a functional shopping cart.
+- Add product sorting by price and rating.
+- Add pagination for large product lists.
+- Improve the user interface with animations.
 
 ---
 
 ## 👩‍💻 Author
 
-Bassant
-
-- GitHub: https://github.com/Bassant2004
- 
+Bassant Khaled
